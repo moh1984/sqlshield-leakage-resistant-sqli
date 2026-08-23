@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 Mahmoud Baklizi, Mohammad Alkhazaleh, Musab Zghoul, Osama Qtaish
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Scope note
+----------
+The MIT terms above apply to the source code in this repository
+(`sqlshield/`, `scripts/`, `tests/`, `figures/`).
+
+Author-generated content under `results/` -- model predictions, scores,
+labels, confusion counts, statistical test outputs, cluster identifiers,
+training histories, and derived evaluation summaries -- is released under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Any source-query text reproduced inside those files (the `text` column of the
+prediction CSVs, and the query strings quoted in `results/error_analysis/`) is
+NOT author-generated and is NOT relicensed here. It originates from the two
+Kaggle corpora below and remains subject to the terms of their original
+publishers:
+  - sajid576/sql-injection-dataset
+  - syedsaqlainhussain/sql-injection-dataset
+
+The raw corpora themselves are not redistributed as datasets; users obtain them
+directly from Kaggle. Users who redistribute the prediction files should satisfy
+themselves that reproducing the included query text is permitted by those terms.
+
+Pretrained model weights (microsoft/codebert-base, bert-base-uncased) remain
+subject to their respective upstream licenses.

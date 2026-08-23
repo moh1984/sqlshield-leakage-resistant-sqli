@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use SQLShield or its released evaluation artifacts, please cite the accompanying manuscript."
+title: "SQLShield: Leakage-Resistant SQL Injection Detection with Fine-Tuned CodeBERT, Classical Baselines, and Cross-Source Evaluation"
+type: software
+version: 1.4.0
+date-released: 2026-08-23
+# After creating the public GitHub repository, replace <user> and uncomment the field below:
+# repository-code: "https://github.com/<user>/sqlshield-leakage-resistant-sqli"
+authors:
+  - family-names: Baklizi
+    given-names: Mahmoud
+    affiliation: "University of Petra, Faculty of Information Technology, Department of Computer Science, Amman, Jordan"
+  - family-names: Alkhazaleh
+    given-names: Mohammad
+    affiliation: "Isra University, Faculty of Information Technology, Department of Computer Science, Amman, Jordan"
+  - family-names: Zghoul
+    given-names: Musab
+    affiliation: "Isra University, Faculty of Information Technology, Department of Computer Science, Amman, Jordan"
+  - family-names: Qtaish
+    given-names: Osama
+    affiliation: "Isra University, Faculty of Information Technology, Department of Software Engineering, Amman, Jordan"
+preferred-citation:
+  type: article
+  title: "SQLShield: Leakage-Resistant SQL Injection Detection with Fine-Tuned CodeBERT, Classical Baselines, and Cross-Source Evaluation"
+  year: 2026
+  authors:
+    - family-names: Baklizi
+      given-names: Mahmoud
+    - family-names: Alkhazaleh
+      given-names: Mohammad
+    - family-names: Zghoul
+      given-names: Musab
+    - family-names: Qtaish
+      given-names: Osama
