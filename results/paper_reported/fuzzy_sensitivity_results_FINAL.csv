@@ -1,0 +1,5 @@
+threshold,grouping,model,model_id,seed,best_epoch,best_val_f1,accuracy,precision,recall,f1,roc_auc,pr_auc,balanced_accuracy,mcc,tn,fp,fn,tp,errors,n,elapsed_seconds,train_n,val_n,test_n,test_sqli,test_benign
+1.0,existing_exact_normalized_text_baseline,CodeBERT,microsoft/codebert-base,42,,,0.9994694021931376,0.9995460735360872,0.9990925589836661,0.9993192648059904,0.9999710670980299,0.9999587498697292,0.9994013519556011,0.9988846142841227,3449,1,2,2202,3,5654,,45288,5679,5654,2204,3450
+0.9,fuzzy_5char_jaccard_connected_components,CodeBERT,microsoft/codebert-base,42,4.0,0.999776,0.999115,0.999546,0.998186,0.998865,0.999965,0.999949,0.998948,0.998141,3446,1,4,2201,5,5652,4030.732533,45291,5678,5652,2205,3447
+0.8,fuzzy_5char_jaccard_connected_components,CodeBERT,microsoft/codebert-base,42,2.0,0.999307,0.998436,0.999569,0.996562,0.998063,0.999968,0.999955,0.998135,0.996755,3426,1,8,2319,9,5754,4032.601562,45277,5590,5754,2327,3427
+0.7,fuzzy_5char_jaccard_connected_components,CodeBERT,microsoft/codebert-base,42,3.0,0.999516,0.999095,1.0,0.997677,0.998837,0.999941,0.999914,0.998838,0.998098,3373,0,5,2147,5,5525,4058.073411,45601,5495,5525,2152,3373

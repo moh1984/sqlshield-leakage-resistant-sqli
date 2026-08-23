@@ -1,0 +1,3 @@
+experiment,train_source,external_source,external_before,removed_normalized_overlap,external_after,external_remaining_pct,benign_after,sqli_after,sqli_pct_after,train_source_rows,train_partition_rows,val_partition_rows
+cross_source_A_sajid576_TO_B_sqliv2,A_sajid576,B_sqliv2,33537,18355,15182,45.2694039419149,15004,178,1.1724410486101964,30764,27687,3077
+cross_source_B_sqliv2_TO_A_sajid576,B_sqliv2,A_sajid576,30764,18356,12408,40.33285658561955,12313,95,0.7656350741457124,33537,30183,3354

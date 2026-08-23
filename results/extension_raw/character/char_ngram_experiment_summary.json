@@ -1,0 +1,136 @@
+{
+  "base_dir": "/kaggle/working/sqlshield_corrected_validation",
+  "train_n": 45288,
+  "test_n": 5654,
+  "char_vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "max_features": 50000,
+    "lowercase": true
+  },
+  "primary_mcnemar_family_size": 7,
+  "alpha": 0.05,
+  "bonferroni_raw_alpha": 0.0071428571428571435,
+  "codebert_prediction_file": "/kaggle/working/sqlshield_corrected_validation/predictions/corrected_group_split_pilot__CodeBERT__seed42.csv",
+  "bert_prediction_file": "/kaggle/working/sqlshield_corrected_validation/predictions/corrected_group_split_pilot__BERT-base__seed42.csv",
+  "char_results": [
+    {
+      "accuracy": 0.9984082065794128,
+      "precision": 0.9990904956798545,
+      "recall": 0.9968239564428312,
+      "f1": 0.9979559391324098,
+      "roc_auc": 0.9995866540414003,
+      "pr_auc": 0.9995242743986726,
+      "balanced_accuracy": 0.9981221231489519,
+      "mcc": 0.996654262013524,
+      "tn": 3448,
+      "fp": 2,
+      "fn": 7,
+      "tp": 2197,
+      "errors": 9,
+      "n": 5654,
+      "elapsed_seconds": 5.910709381103516,
+      "model": "Char LinearSVC"
+    },
+    {
+      "accuracy": 0.996462681287584,
+      "precision": 0.9986301369863013,
+      "recall": 0.9922867513611615,
+      "f1": 0.9954483386436049,
+      "roc_auc": 0.9993468397380258,
+      "pr_auc": 0.9993398781195494,
+      "balanced_accuracy": 0.9957085930718851,
+      "mcc": 0.9925691816502538,
+      "tn": 3447,
+      "fp": 3,
+      "fn": 17,
+      "tp": 2187,
+      "errors": 20,
+      "n": 5654,
+      "elapsed_seconds": 7.544007062911987,
+      "model": "Char Logistic Regression"
+    }
+  ],
+  "mcnemar": [
+    {
+      "comparison": "CodeBERT vs BERT-base",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 5,
+      "discordant": 7,
+      "exact_p": 0.453125,
+      "holm_p": 0.453125,
+      "bonferroni_p": 1.0,
+      "significant_holm_0.05": false,
+      "significant_bonferroni": false
+    },
+    {
+      "comparison": "CodeBERT vs Random Forest",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 15,
+      "discordant": 17,
+      "exact_p": 0.002349853515625,
+      "holm_p": 0.007049560546875,
+      "bonferroni_p": 0.016448974609375,
+      "significant_holm_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "comparison": "CodeBERT vs XGBoost",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 20,
+      "discordant": 22,
+      "exact_p": 0.00012111663818359375,
+      "holm_p": 0.0006055831909179688,
+      "bonferroni_p": 0.0008478164672851562,
+      "significant_holm_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "comparison": "CodeBERT vs Word LinearSVC",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 24,
+      "discordant": 26,
+      "exact_p": 1.049041748046875e-05,
+      "holm_p": 6.29425048828125e-05,
+      "bonferroni_p": 7.343292236328125e-05,
+      "significant_holm_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "comparison": "CodeBERT vs Word Logistic Regression",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 51,
+      "discordant": 53,
+      "exact_p": 3.1796787425264483e-13,
+      "holm_p": 2.225775119768514e-12,
+      "bonferroni_p": 2.225775119768514e-12,
+      "significant_holm_0.05": true,
+      "significant_bonferroni": true
+    },
+    {
+      "comparison": "CodeBERT vs Char LinearSVC",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 8,
+      "discordant": 10,
+      "exact_p": 0.109375,
+      "holm_p": 0.21875,
+      "bonferroni_p": 0.765625,
+      "significant_holm_0.05": false,
+      "significant_bonferroni": false
+    },
+    {
+      "comparison": "CodeBERT vs Char Logistic Regression",
+      "cb_wrong_other_correct": 2,
+      "cb_correct_other_wrong": 19,
+      "discordant": 21,
+      "exact_p": 0.00022125244140625,
+      "holm_p": 0.000885009765625,
+      "bonferroni_p": 0.00154876708984375,
+      "significant_holm_0.05": true,
+      "significant_bonferroni": true
+    }
+  ]
+}

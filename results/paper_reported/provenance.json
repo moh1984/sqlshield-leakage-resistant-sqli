@@ -1,0 +1,26 @@
+{
+  "artifact_version": "1.4.0",
+  "date": "2026-08-17",
+  "kaggle_notebook_slug": "mohammadalkhazaleh/notebook691d0eee69",
+  "archived_base_saved_version": 9,
+  "archived_base_saved_version_status": "Successful",
+  "extensions": {
+    "character_baselines": "Executed 2026-08-17; original small CSV/JSON outputs retained under results/extension_raw/character/.",
+    "fuzzy_near_duplicate_sensitivity": "Completed 2026-08-17; final metrics/audit transcribed from captured Kaggle console output; full ~1.4 GB archive intentionally omitted."
+  },
+  "notes": [
+    "Repository release v1.4.0 is synchronized to the IJIES-format manuscript (paper/SQLShield_Paper_IJIES_final.docx); the verified experimental outputs and per-sample predictions are unchanged from the complete-prediction evidence release.",
+    "The final manuscript/repository release adds statistical uncertainty, direct three-error analysis, error complementarity, and scoped computational-cost reporting to the character and fuzzy sensitivity extensions.",
+    "Some five-seed rows were recovered from notebook output printed to 6 decimal places; the source column marks provenance.",
+    "Raw Kaggle datasets, Hugging Face model weights, and large checkpoints are not redistributed.",
+    "All eight aligned 5,654-row fixed-test prediction CSVs are included; strict verification recomputes all seven exact McNemar comparisons directly from these predictions and passes.",
+    "Historical Kaggle package versions were not captured; requirements-lock.txt is a frozen compatibility environment rather than an exact historical environment export."
+  ],
+  "manuscript": "paper/SQLShield_Paper_IJIES_final.docx",
+  "reporting_extensions": {
+    "wilson_accuracy_ci": "Computed from fixed-test correct/error counts using two-sided 95% Wilson score intervals.",
+    "error_overlap": "CodeBERT vs Char LinearSVC overlap and row identities are recomputed directly from the released aligned per-sample predictions; the error union contains 11 distinct rows.",
+    "computational_cost": "Logged wall-clock timings with distinct scopes/hardware; not inference latency.",
+    "prediction_verification": "Strict verifier recomputes fixed-test confusion metrics and all seven exact McNemar comparisons from the eight shipped 5,654-row prediction CSVs."
+  }
+}

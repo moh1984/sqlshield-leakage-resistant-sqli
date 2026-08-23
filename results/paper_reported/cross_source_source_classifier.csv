@@ -1,0 +1,2 @@
+task,train_n,test_n,accuracy,balanced_accuracy,f1,roc_auc,tn,fp,fn,tp
+benign_A_vs_B_source_identification,21853,5464,0.9970695970695971,0.9967466449776332,0.997341309405118,0.9989037136733194,2443,16,0,3001

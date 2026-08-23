@@ -1,0 +1,12 @@
+text,source,true_label,codebert_pred,char_linearsvc_pred,category
+delete,sajid576/sql-injection-dataset,1,1,0,char_linearsvc_only_error
+//*,sajid576/sql-injection-dataset,1,1,0,char_linearsvc_only_error
+"""*""",sajid576/sql-injection-dataset,1,1,0,char_linearsvc_only_error
+5739-5738,sajid576/sql-injection-dataset,1,0,0,shared_error
+sort,sajid576/sql-injection-dataset,0,1,0,codebert_only_error
+grant connect to name; grant resource to name;,sajid576/sql-injection-dataset,1,1,0,char_linearsvc_only_error
+"SELECT * FROM Users WHERE Name  = ""John Doe"" AND Pass  = ""myPass""",sajid576/sql-injection-dataset,0,0,1,char_linearsvc_only_error
+"SELECT * FROM Users WHERE Name  = """" or """" = """" AND Pass  = """" or """" = """"",sajid576/sql-injection-dataset,0,0,1,char_linearsvc_only_error
+29 %,syedsaqlainhussain/sql-injection-dataset/sqliv2.csv,1,1,0,char_linearsvc_only_error
+'&',syedsaqlainhussain/sql-injection-dataset/sqliv2.csv,1,1,0,char_linearsvc_only_error
+hi or a = a,syedsaqlainhussain/sql-injection-dataset/sqliv2.csv,1,0,1,codebert_only_error

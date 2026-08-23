@@ -1,0 +1,5 @@
+threshold,num_fuzzy_clusters,verified_similarity_edges,mixed_label_fuzzy_clusters,rows_in_mixed_label_clusters,max_exact_groups_in_cluster,max_rows_in_cluster,train_n,val_n,test_n
+1.0,45915,,0,0,1,4,45288,5679,5654
+0.9,43675,12825.0,0,0,180,360,45291,5678,5652
+0.8,40705,67291.0,0,0,400,700,45277,5590,5754
+0.7,38526,171906.0,0,0,400,700,45601,5495,5525

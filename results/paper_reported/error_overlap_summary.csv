@@ -1,0 +1,2 @@
+comparison,codebert_errors,char_linearsvc_errors,codebert_only_errors,char_linearsvc_only_errors,shared_errors,error_union,error_set_jaccard,exact_mcnemar_p,holm_adjusted_p,identity_status
+CodeBERT vs Char LinearSVC,3,9,2,8,1,11,0.09090909090909091,0.109375,0.21875,counts proven from paired McNemar table; row identities require CodeBERT per-sample prediction export

@@ -1,0 +1,8 @@
+comparison,cb_wrong_other_correct,cb_correct_other_wrong,discordant,exact_p,holm_p,bonferroni_p,significant_holm_0.05,significant_bonferroni
+CodeBERT vs BERT-base,2,5,7,0.453125,0.453125,1.0,False,False
+CodeBERT vs Random Forest,2,15,17,0.002349853515625,0.007049560546875,0.016448974609375,True,True
+CodeBERT vs XGBoost,2,20,22,0.00012111663818359375,0.0006055831909179688,0.0008478164672851562,True,True
+CodeBERT vs Word LinearSVC,2,24,26,1.049041748046875e-05,6.29425048828125e-05,7.343292236328125e-05,True,True
+CodeBERT vs Word Logistic Regression,2,51,53,3.1796787425264483e-13,2.225775119768514e-12,2.225775119768514e-12,True,True
+CodeBERT vs Char LinearSVC,2,8,10,0.109375,0.21875,0.765625,False,False
+CodeBERT vs Char Logistic Regression,2,19,21,0.00022125244140625,0.000885009765625,0.00154876708984375,True,True

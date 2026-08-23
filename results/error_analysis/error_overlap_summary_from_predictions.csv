@@ -1,0 +1,2 @@
+codebert_errors,char_linearsvc_errors,codebert_only_errors,char_linearsvc_only_errors,shared_errors,error_union,error_set_jaccard
+3,9,2,8,1,11,0.09090909090909091

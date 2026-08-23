@@ -1,0 +1,19 @@
+model,filename,included_in_this_release,needed_for_strict_mcnemar_verification,supports
+CodeBERT,corrected_group_split_pilot__CodeBERT__seed42.csv,True,True,Table 4 / Table 5 / Table 6 / Figure 3 / Figure 4 / Figure 6
+BERT-base,corrected_group_split_pilot__BERT-base__seed42.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+Random Forest,classical__Random_Forest.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+XGBoost,classical__XGBoost.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+Word LinearSVC,classical__SVM.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+Word Logistic Regression,classical__Logistic_Regression.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+Char LinearSVC,classical__Char_LinearSVC.csv,True,True,Table 4 / Table 5 / Table 6 / Figure 4 / Figure 6
+Char Logistic Regression,classical__Char_Logistic_Regression.csv,True,True,Table 4 / Table 5 / Figure 4 / Figure 6
+CodeBERT (multi-seed 21),corrected_group_split_multiseed__CodeBERT__seed21.csv,True,False,Multi-seed stability (Section 4.4) / Figure 5
+BERT-base (multi-seed 126),corrected_group_split_multiseed__BERT-base__seed126.csv,True,False,Multi-seed stability (Section 4.4) / Figure 5
+CodeBERT (cross-source A->B),cross_source_A_sajid576_TO_B_sqliv2__CodeBERT__seed42.csv,True,False,Table 9 / Figure 7
+CodeBERT (cross-source B->A),cross_source_B_sqliv2_TO_A_sajid576__CodeBERT__seed42.csv,True,False,Table 9 / Figure 7 / threshold transfer
+CodeBERT (multi-seed 7),corrected_group_split_multiseed__CodeBERT__seed7.csv,False,False,not retained upstream
+CodeBERT (multi-seed 84),corrected_group_split_multiseed__CodeBERT__seed84.csv,False,False,not retained upstream
+CodeBERT (multi-seed 126),corrected_group_split_multiseed__CodeBERT__seed126.csv,False,False,not retained upstream
+BERT-base (multi-seed 7),corrected_group_split_multiseed__BERT-base__seed7.csv,False,False,not retained upstream
+BERT-base (multi-seed 21),corrected_group_split_multiseed__BERT-base__seed21.csv,False,False,not retained upstream
+BERT-base (multi-seed 84),corrected_group_split_multiseed__BERT-base__seed84.csv,False,False,not retained upstream

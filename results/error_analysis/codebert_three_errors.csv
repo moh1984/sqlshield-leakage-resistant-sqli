@@ -1,0 +1,4 @@
+text,source,true_label,codebert_pred,codebert_prob_sqli,char_linearsvc_pred,char_linearsvc_score,category
+5739-5738,sajid576/sql-injection-dataset,1,0,0.0001444410008843,0,-0.8750904092756572,shared_error
+sort,sajid576/sql-injection-dataset,0,1,0.686859130859375,0,-0.9785247958180072,codebert_only_error
+hi or a = a,syedsaqlainhussain/sql-injection-dataset/sqliv2.csv,1,0,0.0548534542322158,1,1.0584637581925516,codebert_only_error

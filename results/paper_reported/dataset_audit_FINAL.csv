@@ -1,0 +1,4 @@
+dataset,rows,benign,sqli,unique_normalized_groups,notes
+A_sajid576,30766,19481,11285,30736,After source-specific strict cleaning; contradictory #NAME? rows still present for conflict detection
+B_sqliv2,33537,22171,11366,33527,After source-specific strict cleaning (UTF-16 sqliv2.csv)
+corrected_merged,56621,34490,22131,45915,One contradictory normalized group (2 rows) removed; exact text deduplicated across sources

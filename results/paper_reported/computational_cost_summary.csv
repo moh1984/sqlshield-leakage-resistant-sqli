@@ -1,0 +1,4 @@
+model,scope,wall_clock_seconds,wall_clock_min,hardware_path,comparable_as_inference_latency,note
+CodeBERT,"four-epoch retraining + validation each epoch + final test, fuzzy thresholds 0.9/0.8/0.7",4040.4691686666665,67.34115281111112,NVIDIA T4 GPU,False,Mean across three fuzzy-sensitivity runs; timing scope differs from classical timing.
+Char LinearSVC,TF-IDF fit + classifier fit + fixed-test prediction/scoring,5.910709381103516,0.09851182301839193,CPU path in Kaggle run,False,Not an isolated serving-latency measurement.
+Char Logistic Regression,TF-IDF fit + classifier fit + fixed-test prediction/scoring,7.544007062911987,0.12573345104853312,CPU path in Kaggle run,False,Not an isolated serving-latency measurement.
