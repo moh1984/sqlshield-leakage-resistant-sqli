@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sqlshield-research"
-version = "1.4.0"
+version = "1.5.0"
 description = "Leakage-resistant SQL injection detection with statistical uncertainty, prediction-level verification, near-duplicate sensitivity, and cross-source diagnostics"
 requires-python = ">=3.10,<3.13"
 dependencies = [

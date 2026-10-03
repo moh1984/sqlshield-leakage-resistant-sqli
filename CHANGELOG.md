@@ -1,5 +1,49 @@
 # Changelog
 
+# v1.5.0 — reviewer-requested experiments (IJIES revision)
+
+Nothing in `sqlshield/` changed. The published results of v1.4.0 remain
+reproducible exactly as before, and were reproduced during this revision.
+
+### Added
+- `scripts/run_cross_source_all_models.py` — bidirectional overlap-free
+  cross-source evaluation for all six classical models and, with
+  `--transformers`, for CodeBERT and BERT-base. Classical models are fitted on
+  the training partition alone so that no model sees more data than the
+  transformers.
+- `scripts/run_baseline_tuning.py` — validation-only grid over n-gram range,
+  vocabulary size, regularisation and class weighting; each distinct vectorizer
+  is fitted once and its matrices reused across classifiers.
+- `scripts/run_lsh_recall_validation.py` — MinHash-LSH candidate recall against
+  exhaustive pairwise Jaccard on a sampled subset.
+- `scripts/run_multi_split.py` — repeated independent group-aware partitions,
+  with `--classical-splits` allowing the cheap family to be run on more
+  partitions than the transformers.
+- `scripts/run_inference_benchmark.py` — batch-1 latency, throughput, parameter
+  count, model size and peak device memory on one documented device.
+- `results/review_2026/` — outputs of the above.
+
+### Corrected in the manuscript, not in the code
+- Exact cross-source deduplication removes 7,680 rows, not 7,678. The 30,764
+  figure for Source A already excludes the two label-conflicted rows, which must
+  therefore not be subtracted a second time.
+- Table 7 became a controlled inference benchmark; the three logged fuzzy-family
+  runtimes (4,030.7 s, 4,032.6 s, 4,058.1 s) moved into Section 7.2, and the
+  fixed-split run is recorded as never having been timed separately.
+
+### Fixed after internal review
+- `run_lsh_recall_validation.py` used 128 MinHash permutations and no seed,
+  while `run_fuzzy_sensitivity.py` uses 256 permutations and seed 12345. The
+  validation therefore measured a different candidate generator from the one
+  that produced Table 8. It now matches the published parameters, including the
+  `max(0.10, tau - margin)` candidate floor and `update_batch` hashing.
+- `run_inference_benchmark.py` measured classical throughput on all 1,000
+  queries in one call while the transformers were measured at batch 32. The
+  classical path is now chunked at the same batch size, so the two families are
+  comparable.
+- Superseded outputs moved to `results/review_2026/superseded/` with a note
+  explaining why each was replaced.
+
 ## 1.4.0 — evidence completion and licensing
 
 - Added four per-sample prediction files that were previously described but not shipped:

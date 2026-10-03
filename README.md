@@ -4,7 +4,40 @@ Reproducibility repository for the manuscript:
 
 > **SQLShield: Leakage-Resistant SQL Injection Detection with Fine-Tuned CodeBERT, Classical Baselines, and Cross-Source Evaluation**
 
-Release **v1.4.0** corresponds to `paper/SQLShield_Paper_IJIES_final.docx`. This release synchronizes the reproducibility artifact with the final manuscript while retaining the fully verified evidence bundle: Wilson confidence intervals, direct three-error analysis, scoped accuracy-cost reporting, near-duplicate sensitivity caveats, **all eight aligned per-sample fixed-test prediction files, plus cross-source and multi-seed prediction evidence**, and a strict prediction-based verifier that recomputes the reported paired tests from those predictions. No headline experimental result is changed by the v1.4.0 evidence-completion release.
+Release **v1.5.0** corresponds to the revised manuscript submitted to IJIES. It
+keeps the v1.4.0 evidence bundle unchanged - Wilson confidence intervals, direct
+three-error analysis, all eight aligned per-sample fixed-test prediction files,
+cross-source and multi-seed prediction evidence, and the strict prediction-based
+verifier - and adds the experiments requested during review. Nothing in
+`sqlshield/` changed, so every number published in v1.4.0 remains reproducible
+exactly as before, and was reproduced during the revision.
+
+### What v1.5.0 adds
+
+Five scripts and their outputs, written against the existing
+`sqlshield.pipeline` API (see `results/review_2026/` and
+`scripts/export_reproducibility_artifacts.py`):
+
+- **Partition variance.** Twenty independent group-aware repartitions for the
+  classical family and three for both transformers. Over those three, the gap
+  between CodeBERT and the strongest classical model is six errors at seed 42,
+  zero at seed 101 where both record four, and four at seed 202; BERT-base and
+  the character baseline exchange rank between seeds 101 and 202. A ranking read
+  off a single partition is not safe.
+- **Cross-source coverage.** All eight models in both directions. Every one
+  fails in the B-to-A direction (balanced accuracy 0.501-0.559), so the failure
+  is not CodeBERT-specific and supports a corpus-level portability problem
+  across the eight models tested here. In the A-to-B direction the same
+  15,182-row residual yields 5 false positives for character LinearSVC, 128 for
+  BERT-base and 769 for CodeBERT.
+- **Baseline tuning.** Validation-only grid search; the strongest classical
+  model moves from nine errors to eight, and word LinearSVC worsens from 25 to
+  30, which is reported rather than suppressed.
+- **Candidate recall.** MinHash-LSH recall against exhaustive Jaccard on a
+  5,000-text sample, under the parameters that produced Table 8: 0.924, 0.949
+  and 0.935 at tau = 0.9, 0.8 and 0.7.
+- **Inference cost.** Batch-1 latency, batch-32 throughput, model size and peak
+  device memory on one documented machine.
 
 ## Fixed-test findings (`n = 5,654`)
 
@@ -48,7 +81,7 @@ This is an important practical result: the two best-performing model classes mak
 | Char LinearSVC fixed-split job | 0.9980 | 9 | **5.91 s** | CPU path |
 | Char Logistic Regression fixed-split job | 0.9954 | 20 | **7.54 s** | CPU path |
 
-**Do not interpret this table as an inference-latency ratio.** The character timings cover TF-IDF/classifier fitting plus fixed-test prediction/scoring, whereas CodeBERT timing covers four-epoch retraining, validation, and final test evaluation. A controlled batch-1/batch-32 serving benchmark remains future work.
+**Do not interpret this table as an inference-latency ratio.** The character timings cover TF-IDF/classifier fitting plus fixed-test prediction/scoring, whereas CodeBERT timing covers four-epoch retraining, validation, and final test evaluation. A controlled batch-1/batch-32 serving benchmark is reported in the reviewer-extension results (`results/review_2026/inference_benchmark.csv`) and in Table 7 of the revised manuscript: 0.923 ms per query on CPU for character LinearSVC against 9.250 ms for CodeBERT on a Tesla T4, and 5,113 queries per second against 176 at batch 32.
 
 ## Near-duplicate sensitivity
 
@@ -136,7 +169,7 @@ sqlshield-leakage-resistant-sqli/
 │   ├── error_analysis/
 │   └── extension_raw/         # char n-gram + per-threshold fuzzy predictions
 ├── paper/
-│   └── SQLShield_Paper_IJIES_final.docx
+│   └── SQLShield_Paper_IJIES_revised_v1.5.0.docx
 ├── notebooks/
 │   ├── kaggle_provenance_notebook.ipynb
 │   └── kaggle_extensions_notebook.ipynb
@@ -211,8 +244,11 @@ The archived base experiment is Kaggle notebook `mohammadalkhazaleh/notebook691d
 ## Manuscript
 
 ```text
-paper/SQLShield_Paper_IJIES_final.docx
+paper/SQLShield_Paper_IJIES_revised_v1.5.0.docx
 ```
+
+This is the first revision submitted to IJIES, with every change marked in red.
+It is under review and has not been published.
 
 ## Continuous verification and citation
 
