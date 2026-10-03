@@ -72,3 +72,22 @@ Per-threshold near-duplicate predictions for Table 8 are in `results/extension_r
 part of the aligned fixed-test family — each threshold induces a different test partition of
 5,652 / 5,754 / 5,525 rows — and they carry an extra `fuzzy_cluster_id` column that lets the
 family-isolation claim be checked directly.
+
+## Tuned classical configurations (Section 4.3)
+
+Four further aligned prediction files cover the configurations selected by the
+validation-only grid search of `scripts/run_baseline_tuning.py`. They are not
+part of the headline comparison, whose significance testing uses the
+pre-specified configurations above, but they allow the exact McNemar family to
+be recomputed against the tuned models.
+
+| File | Rows | Errors | Selected configuration |
+|---|---:|---:|---|
+| `tuned__Char_LinearSVC.csv` | 5,654 | 8 | char 2-5, 20,000 features, C=2, balanced |
+| `tuned__Char_LogReg.csv` | 5,654 | 11 | char 2-4, 100,000 features, C=16 |
+| `tuned__Word_LinearSVC.csv` | 5,654 | 30 | word 1-3, 10,000 features, C=4, balanced |
+| `tuned__Word_LogReg.csv` | 5,654 | 24 | word 1-3, 10,000 features, C=16, balanced |
+
+Word LinearSVC is worse after tuning than before, at 30 errors against 25. That
+is reported rather than suppressed: selection on validation does not guarantee an
+improvement on a held-out test set.

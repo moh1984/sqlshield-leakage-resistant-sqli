@@ -1,0 +1,9 @@
+model,family,weights,device,max_len,params_millions,model_size_mb,vocabulary_size,latency_batch1_ms_median,latency_batch1_ms_p95,batch_size,throughput_qps,peak_gpu_mem_mb
+Random Forest,classical,fitted on train split,cpu,,,,10000.0,47.75441599849728,58.76303754912442,1000,9989.577075115481,
+XGBoost,classical,fitted on train split,cpu,,,,10000.0,1.340348499979882,1.5135200001168414,1000,37219.39691876324,
+Logistic Regression,classical,fitted on train split,cpu,,,,10000.0,0.7759734990031575,1.114035700356908,1000,45574.120206657244,
+SVM,classical,fitted on train split,cpu,,,,10000.0,0.7727785005045007,1.0837332502887875,1000,45733.44672216907,
+Char LinearSVC,classical,fitted on train split,cpu,,,,50000.0,0.917147000109253,1.2743089994728507,1000,6331.727190819357,
+Char Logistic Regression,classical,fitted on train split,cpu,,,,50000.0,0.9519565001028241,1.42719810055496,1000,6262.274566962417,
+CodeBERT,transformer,pretrained + fresh head,cuda,128.0,124.64717,475.49906158447266,,8.905104999939795,9.662089650555572,32,184.4599182490037,618.42236328125
+BERT-base,transformer,pretrained + fresh head,cuda,128.0,109.483778,417.65528106689453,,9.294873999351694,9.77256429951012,32,161.23172902134093,560.08056640625

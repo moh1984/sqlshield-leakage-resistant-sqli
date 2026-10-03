@@ -17,3 +17,7 @@ CodeBERT (multi-seed 126),corrected_group_split_multiseed__CodeBERT__seed126.csv
 BERT-base (multi-seed 7),corrected_group_split_multiseed__BERT-base__seed7.csv,False,False,not retained upstream
 BERT-base (multi-seed 21),corrected_group_split_multiseed__BERT-base__seed21.csv,False,False,not retained upstream
 BERT-base (multi-seed 84),corrected_group_split_multiseed__BERT-base__seed84.csv,False,False,not retained upstream
+Char LinearSVC (tuned),tuned__Char_LinearSVC.csv,True,False,Section 4.3 validation-only tuning
+Char Logistic Reg. (tuned),tuned__Char_LogReg.csv,True,False,Section 4.3 validation-only tuning
+Word LinearSVC (tuned),tuned__Word_LinearSVC.csv,True,False,Section 4.3 validation-only tuning
+Word Logistic Reg. (tuned),tuned__Word_LogReg.csv,True,False,Section 4.3 validation-only tuning
