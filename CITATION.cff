@@ -18,9 +18,6 @@ authors:
   - family-names: Qtaish
     given-names: Osama
     affiliation: "Isra University, Faculty of Information Technology, Department of Software Engineering, Amman, Jordan"
-  - family-names: Al Sardy
-    given-names: Loui
-    affiliation: "Friedrich-Alexander University Erlangen-Nurnberg (FAU), Department of Computer Science, Erlangen, Germany"
 preferred-citation:
   type: article
   title: "SQLShield: Leakage-Resistant SQL Injection Detection with Fine-Tuned CodeBERT, Classical Baselines, and Cross-Source Evaluation"
@@ -34,5 +31,3 @@ preferred-citation:
       given-names: Musab
     - family-names: Qtaish
       given-names: Osama
-    - family-names: Al Sardy
-      given-names: Loui
